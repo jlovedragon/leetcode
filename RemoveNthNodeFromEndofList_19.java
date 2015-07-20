@@ -43,4 +43,28 @@ public class RemoveNthNodeFromEndofList_19 {
 		}
 		return head;
 	}
+
+	public ListNode removeNthFromEnd1(ListNode head, int n) {
+		if (head == null)
+			return null;
+
+		ListNode fast = head;
+		ListNode slow = head;
+
+		for (int i = 0; i < n; i++) {
+			fast = fast.next;
+		}
+
+		if (fast.next == null)
+			return head.next;
+
+		while (fast.next != null) {
+			fast = fast.next;
+			slow = slow.next;
+		}
+
+		slow.next = slow.next.next;
+
+		return head;
+	}
 }
