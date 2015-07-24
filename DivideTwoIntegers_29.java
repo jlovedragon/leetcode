@@ -41,6 +41,6 @@ public class DivideTwoIntegers_29 {
 
 	@Test
 	public void test() {
-		System.out.println(divide1(100, -1));
+		System.out.println(divide(100, -1));
 	}
 }
